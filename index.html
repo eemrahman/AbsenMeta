@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JuaraMeta - Daftar Hadir</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>📋 JuaraMeta - Daftar Hadir</h2>
+        <button class="btn-location" onclick="requestLocation()">📍 Izinkan Lokasi</button>
+        <p id="lokasi-status" class="status-text">⚠️ Lokasi belum diizinkan</p>
+        <div class="form-group">
+            <input type="text" id="nama" placeholder="📝 Nama">
+            <select id="status">
+                <option value="">📌 Pilih Status</option>
+                <option value="Hadir">✅ Hadir</option>
+                <option value="Tidak Hadir">❌ Tidak Hadir</option>
+                <option value="Sakit">🤒 Sakit</option>
+            </select>
+            <button class="btn-submit" id="btn-submit" onclick="submitForm()">📨 Kirim</button>
+        </div>
+        <h3>📊 Data Kehadiran</h3>
+        <table id="dataTable"></table>
+    </div>
+
+    <!-- Modal Kustom untuk Pesan -->
+    <div id="customAlert" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeAlert()">&times;</span>
+            <p id="alertMessage"></p>
+        </div>
+    </div>
+</body>
+</html>
